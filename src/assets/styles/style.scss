@@ -1,0 +1,21 @@
+$primary-color: #f25c07;
+$dark-bg: #2e2f2e;
+
+$primary-font: "Switzer", sans-serif;
+
+body {
+    font-family: $primary-font !important;
+    background-color: $dark-bg;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 15px;
+    color: #fff;
+    accent-color: $primary-color;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}

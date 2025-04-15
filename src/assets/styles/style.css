@@ -1,0 +1,14 @@
+body {
+  font-family: "Switzer", sans-serif !important;
+  background-color: #2e2f2e;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  color: #fff;
+  accent-color: #f25c07;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */

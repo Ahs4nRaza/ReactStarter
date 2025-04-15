@@ -1,0 +1,41 @@
+import React, { Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import RoutePaths from "./RoutePath";
+import { LazyLoadComponents, LazyLoadPages } from "./lazyLoad";
+
+function ProtectedRoute({ condition, fallback, children }) {
+    return condition ? children : fallback;
+}
+
+function AppRoutes() {
+
+    return (
+        <Suspense
+            fallback={
+                <div className="loader-wrapper">
+                    Loader
+                </div>
+            }
+        >
+            <Routes>
+                <Route
+                    path={RoutePaths.MAIN}
+                    element={<LazyLoadComponents.App />}
+                >
+                    <Route
+                        index
+                        element={<LazyLoadPages.TestPage />}
+                    />
+                    <Route path={RoutePaths.RESTRICTED} element={<LazyLoadPages.Restricted />} />
+
+                    <Route path="*" element={<LazyLoadPages.NotFound />} />
+                </Route>
+
+
+                <Route path={RoutePaths.LOGIN} element={<LazyLoadPages.Login />} />
+            </Routes>
+        </Suspense>
+    );
+}
+
+export default AppRoutes;

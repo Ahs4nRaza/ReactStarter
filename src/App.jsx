@@ -1,12 +1,23 @@
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-function App() {
-
-
+const App = () => {
   return (
-    <>
-      <h1> React Starter Files</h1>
-    </>
-  )
-}
+    <div className="app-wrapper">
+      {/* You can add global layout components here like a header/sidebar */}
+      <header>
+        <h1>My App</h1>
+      </header>
 
-export default App
+      <main>
+        <Outlet /> {/* This is where child routes render */}
+      </main>
+
+      <footer>
+        <small>© 2025 My App</small>
+      </footer>
+    </div>
+  );
+};
+
+export default App;

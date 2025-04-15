@@ -1,6 +1,9 @@
 import React from 'react'
+import { useBreadcrumb } from '../../hooks/useBreadcrumbs';
 
 function Restricted() {
+    useBreadcrumb("Restricted");
+
     return (
         <div
             style={{

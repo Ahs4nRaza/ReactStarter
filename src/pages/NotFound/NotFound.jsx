@@ -1,6 +1,8 @@
 import React from 'react';
+import { useBreadcrumb } from '../../hooks/useBreadcrumbs';
 
 function NotFound() {
+    useBreadcrumb("Not Found");
     return (
         <div
             style={{

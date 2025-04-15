@@ -37,7 +37,6 @@ function SideMenu() {
             <ul className="nav" style={{ listStyle: 'none', padding: 0 }}>
                 <li style={{ marginBottom: '10px' }}>
                     <NavLink
-                        exact
                         to="/"
                         style={({ isActive }) => ({
                             color: isActive ? '#5754a8' : 'white',

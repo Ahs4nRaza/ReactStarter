@@ -1,6 +1,10 @@
 import React from "react";
+import { useBreadcrumb } from "../../hooks/useBreadcrumbs";
 
 const Header = () => {
+    const { getBreadcrumb } = useBreadcrumb();
+    console.log("breadcrumb", getBreadcrumb());
+
     return (
         <header
             style={{
@@ -14,6 +18,7 @@ const Header = () => {
             }}
         >
             <p>Header</p>
+            <p>Current Breadcrumb: {getBreadcrumb()}</p>
         </header>
     );
 };

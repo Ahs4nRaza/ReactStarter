@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import { SET_BREADCRUMB } from "../utils/actionConstants";
+import { SET_BREADCRUMB } from "../utils";
 
 // Create the context
 export const BreadcrumbContext = createContext();

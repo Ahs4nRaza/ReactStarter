@@ -12,3 +12,9 @@ export const FORM_CONTROL_TYPES = {
     RADIO_GROUP: 'radio_group',
 };
 
+export const NOTIFICATION_TYPES = {
+    SUCCESS: 'success',
+    ERROR: 'error',
+    INFO: 'info',
+    WARNING: 'warning',
+};

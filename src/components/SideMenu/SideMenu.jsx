@@ -35,7 +35,7 @@ function SideMenu() {
             </button>
 
             <ul className="nav" style={{ listStyle: 'none', padding: 0 }}>
-                <li style={{ marginBottom: '10px' }}>
+                <li style={{ marginBottom: '10px' }} title={isExpanded ? "" : "Test Page"}>
                     <NavLink
                         to="/"
                         style={({ isActive }) => ({
@@ -49,7 +49,7 @@ function SideMenu() {
                         {isExpanded ? 'Test Page' : '1'}
                     </NavLink>
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li style={{ marginBottom: '10px' }} title={isExpanded ? "" : "Restricted Page"}>
                     <NavLink
                         to="/restricted"
                         style={({ isActive }) => ({
@@ -63,7 +63,7 @@ function SideMenu() {
                         {isExpanded ? 'Restricted' : '2'}
                     </NavLink>
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li style={{ marginBottom: '10px' }} title={isExpanded ? "" : "Projects"}>
                     <NavLink
                         to="/projects"
                         style={({ isActive }) => ({
@@ -73,8 +73,9 @@ function SideMenu() {
                             padding: '10px',
                             fontSize: '18px',
                         })}
+
                     >
-                        {isExpanded ? 'Not Found' : '3'}
+                        {isExpanded ? 'Projects' : '3'}
                     </NavLink>
                 </li>
             </ul>

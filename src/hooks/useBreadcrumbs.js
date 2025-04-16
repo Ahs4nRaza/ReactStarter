@@ -10,7 +10,6 @@ export const useBreadcrumb = (breadcrumbValue = null) => {
     }
 
     const setBreadcrumb = (value) => {
-        console.log("Set breadcrumb value: ", value)
         dispatch({
             type: "setBreadcrumb",
             payload: value,
@@ -19,12 +18,10 @@ export const useBreadcrumb = (breadcrumbValue = null) => {
 
 
     const getBreadcrumb = () => {
-        console.log("returning breadcrumb ", breadcrumb)
         return breadcrumb;
     };
 
     useEffect(() => {
-        console.log("BreadCrumb recived: ", breadcrumbValue)
         if (breadcrumbValue !== null) {
             // Set the breadcrumb when the component is rendered
             setBreadcrumb(breadcrumbValue);

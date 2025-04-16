@@ -3,7 +3,6 @@ import { useBreadcrumb } from "../../hooks/useBreadcrumbs";
 
 const Header = () => {
     const { getBreadcrumb } = useBreadcrumb();
-    console.log("breadcrumb", getBreadcrumb());
 
     return (
         <header

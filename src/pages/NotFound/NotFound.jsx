@@ -1,8 +1,20 @@
 import React from 'react';
 import { useBreadcrumb } from '../../hooks/useBreadcrumbs';
+import { useLocation } from 'react-router-dom';
 
 function NotFound() {
-    useBreadcrumb("Not Found");
+    const location = useLocation();
+
+    useBreadcrumb({
+        parent: {
+            label: "Not Found",
+            url: location.pathname,
+        },
+        child: {
+            label: "",
+        }
+    });
+
     return (
         <div
             style={{

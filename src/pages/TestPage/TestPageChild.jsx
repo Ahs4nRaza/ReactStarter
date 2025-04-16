@@ -2,14 +2,14 @@ import React from 'react'
 import { useBreadcrumb } from '../../hooks/useBreadcrumbs';
 import RoutePaths from "../../routes/routePath"
 
-function Restricted() {
+function TestPage() {
     useBreadcrumb({
         parent: {
-            label: "Restricted",
-            url: RoutePaths.RESTRICTED
+            label: "Test Page",
+            url: RoutePaths.MAIN
         },
         child: {
-            label: "",
+            label: "Test Page Child",
         }
     });
 
@@ -24,9 +24,9 @@ function Restricted() {
                 backgroundColor: "#2e2f2e",
             }}
         >
-            <p>Restricted</p>
+            <p>Test Page Child</p>
         </div>
-    );
+    )
 }
 
-export default Restricted
+export default TestPage

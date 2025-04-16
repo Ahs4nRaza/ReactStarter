@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import RoutePaths from "./RoutePath";
+import RoutePaths from "./routePath";
 import { LazyLoadComponents, LazyLoadPages } from "./lazyLoad";
 
 function ProtectedRoute({ condition, fallback, children }) {
@@ -26,6 +26,7 @@ function AppRoutes() {
                         index
                         element={<LazyLoadPages.TestPage />}
                     />
+                    <Route path={RoutePaths.TEST_PAGE_CHILD} element={<LazyLoadPages.TestPageChild />} />
                     <Route path={RoutePaths.RESTRICTED} element={<LazyLoadPages.Restricted />} />
 
                     <Route path="*" element={<LazyLoadPages.NotFound />} />

@@ -11,3 +11,4 @@ export const FORM_CONTROL_TYPES = {
     CHECKBOX_SINGLE: 'checkbox_single',
     RADIO_GROUP: 'radio_group',
 };
+

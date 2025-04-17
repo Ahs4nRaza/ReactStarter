@@ -20,6 +20,9 @@ function TestPage() {
     const navigateToChildPage = () => {
         navigate(RoutePaths.TEST_PAGE_CHILD);
     };
+    const navigateToSamplePage = () => {
+        navigate(RoutePaths.TEST_PAGE_SAMPLE);
+    };
 
     return (
         <div
@@ -45,6 +48,22 @@ function TestPage() {
             >
                 Go to Child Page
             </Button>
+
+            {/* Add spacing between elements */}
+            <div style={{ margin: "20px 0" }}></div>
+
+            <p>Sample Test Page</p>
+            <Button
+                style={{
+                    marginTop: "20px",
+                    backgroundColor: "#5754a8",
+                    color: "white",
+                }}
+                onClick={navigateToSamplePage}
+            >
+                Go to Sample Page
+            </Button>
+
         </div>
     );
 }

@@ -28,6 +28,7 @@ function AppRoutes() {
                         element={<LazyLoadPages.TestPage />}
                     />
                     <Route path={RoutePaths.TEST_PAGE_CHILD} element={<LazyLoadPages.TestPageChild />} />
+                    <Route path={RoutePaths.TEST_PAGE_SAMPLE} element={<LazyLoadPages.TestPageSample />} />
                     <Route path={RoutePaths.RESTRICTED} element={<LazyLoadPages.Restricted />} />
 
                     <Route path="*" element={<LazyLoadPages.NotFound />} />

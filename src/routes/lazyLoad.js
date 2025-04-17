@@ -11,4 +11,5 @@ export const LazyLoadPages = {
     Restricted: lazy(() => import("../pages/Restricted/Restricted")),
     TestPage: lazy(() => import("../pages/TestPage/TestPage")),
     TestPageChild: lazy(() => import("../pages/TestPage/TestPageChild")),
+    TestPageSample: lazy(() => import("../pages/TestPage/SampleOne")),
 };

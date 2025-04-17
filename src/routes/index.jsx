@@ -18,6 +18,7 @@ function AppRoutes() {
             }
         >
             <Routes>
+                {/* <Route element={<LazyLoadComponents.Auth />}> */}
                 <Route
                     path={RoutePaths.MAIN}
                     element={<LazyLoadComponents.App />}
@@ -31,7 +32,7 @@ function AppRoutes() {
 
                     <Route path="*" element={<LazyLoadPages.NotFound />} />
                 </Route>
-
+                {/* </Route> */}
 
                 <Route path={RoutePaths.LOGIN} element={<LazyLoadPages.Login />} />
             </Routes>

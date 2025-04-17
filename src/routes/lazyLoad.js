@@ -2,6 +2,7 @@ import { lazy } from "react";
 
 export const LazyLoadComponents = {
     App: lazy(() => import("../App")),
+    Auth: lazy(() => import("../components/Auth/Auth")),
 };
 
 export const LazyLoadPages = {

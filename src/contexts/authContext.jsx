@@ -1,5 +1,5 @@
 import { createContext, useReducer, useEffect } from "react";
-import { AUTH_TOKEN_KEY, LOGIN_ACTION, LOGOUT_ACTION, USER_ROLE } from '@/utils';
+import { AUTH_TOKEN_KEY, LOGIN_ACTION, LOGOUT_ACTION, USER_ROLE } from "../utils"
 
 export const AuthContext = createContext();
 

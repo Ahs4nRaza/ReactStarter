@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 
-const useInterval = (callback, delay) => {
+export const useInterval = (callback, delay) => {
     const currentCallback = useRef();
 
     // Store the latest callback in the ref.
@@ -25,4 +25,4 @@ const useInterval = (callback, delay) => {
     }, [delay]);
 };
 
-export default useInterval;
+

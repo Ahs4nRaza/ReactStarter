@@ -44,9 +44,9 @@ const Auth = () => {
     }, [dispatch, getFromLocalStorage, removeFromLocalStorage, navigate]);
 
     return (
-        <div className="auth-container">
+        <div className="">
             {loading ? (
-                <div className="loading">Loading...</div>
+                <div className="">Loading...</div>
             ) : user ? (
                 <Outlet />
             ) : (

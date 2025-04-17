@@ -34,7 +34,7 @@ function SideMenu() {
                 {isExpanded ? '<-' : '->'}
             </button>
 
-            <ul className="nav" style={{ listStyle: 'none', padding: 0 }}>
+            <ul className="" style={{ listStyle: 'none', padding: 0 }}>
                 <li style={{ marginBottom: '10px' }} title={isExpanded ? "" : "Test Page"}>
                     <NavLink
                         to="/"

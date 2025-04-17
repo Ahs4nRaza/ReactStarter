@@ -84,7 +84,7 @@ export const DynamicTable = ({ data, handleOnTableChange, tableConfig, handleRow
 
             style={tableConfig?.styling?.table}
             pagination={false}
-            className="table-class"
+            className=""
             locale={customLocale}
         />
     );

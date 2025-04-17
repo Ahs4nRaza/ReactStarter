@@ -12,7 +12,7 @@ function AppRoutes() {
     return (
         <Suspense
             fallback={
-                <div className="loader-wrapper">
+                <div className="">
                     Loader
                 </div>
             }

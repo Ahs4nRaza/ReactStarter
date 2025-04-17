@@ -1,4 +1,5 @@
 export const AUTH_TOKEN_KEY = import.meta.env.VITE_AUTH_TOKEN_KEY;
+export const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 export const DEFAULT_DATE_FORMAT = "DD/MM/YYYY";
 

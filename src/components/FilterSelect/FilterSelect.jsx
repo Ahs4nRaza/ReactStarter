@@ -1,3 +1,4 @@
+import React from 'react';
 import { Select } from 'antd';
 
 const FilterSelect = ({
@@ -43,4 +44,4 @@ const FilterSelect = ({
     </div>
 );
 
-export default FilterSelect;
+export default React.memo(FilterSelect);

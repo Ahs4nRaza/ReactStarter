@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import FilterController from '../../components/FilterController/FilterController';
 import { SearchOutlined } from '@ant-design/icons';
-import { useDebounce } from '../../hooks/useDebounce';
 import { useBreadcrumb } from '../../hooks/useBreadcrumbs';
 import RoutePaths from "../../routes/routePath"
+import { updateFilterValue, handleClearFilters } from '../../utils';
 
 const TestPage = () => {
     useBreadcrumb({
@@ -19,27 +19,26 @@ const TestPage = () => {
     const [filters, setFilters] = useState({
         search: '',
         status: 'active',
-        role: []
+        role: [],
+        sortOrder: 'asc',
+        sortKey: 'id'
     });
 
-    // Debounce the search value with a delay of 500ms (or any delay you prefer)
-    const debouncedSearch = useDebounce(filters.search, 5000);
 
-    const handleSearchChange = (e) => {
-        setFilters(prev => ({ ...prev, search: e.target.value }));
+    const handleSearchChange = (value) => {
+        setFilters(prev => updateFilterValue(prev, 'search', value ?? ''));
+
     };
 
     const handleFilterChange = (key) => (value) => {
-        setFilters(prev => ({ ...prev, [key]: value }));
-    };
+        setFilters(prev => updateFilterValue(prev, key, value));
+    }
 
     const clearFilters = () => {
-        setFilters({
-            search: '',
-            status: 'active',
-            role: []
-        });
+        const newFilters = handleClearFilters(filters, true);
+        setFilters(newFilters);
     };
+
 
     const config = {
         searchInput: {
@@ -100,14 +99,10 @@ const TestPage = () => {
         }
     };
 
-    // Use the debounced value for any API calls or side-effects
-    // (for example, when debouncedSearch changes, make an API request)
     useEffect(() => {
-        if (debouncedSearch) {
-            console.log('Debounced Search:', debouncedSearch);
-            // Trigger any side-effects or API calls here
-        }
-    }, [debouncedSearch]);
+        console.log('Filters updated:', filters);
+    }, [filters]);
+
 
     return (
         <div className="p-6 space-y-4">
